@@ -59,10 +59,9 @@
                   <input type="radio" name="tip" id="50" />
                 </label>
                 <label for="custom" class="calculator-input-section__tip-set__values-value">
-                  <input type="text" name="custom" id="custom" placeholder="Custom"/>
+                  <input type="text" name="custom" id="custom" placeholder="Custom" />
                 </label>
               </div>
-
             </fieldset>
           </div>
           <div class="calculator-input-section__people">
@@ -70,22 +69,26 @@
             <input type="text" class="calculator-input-section__people-input" name="peoplenum" id="people-input" />
           </div>
         </div>
-        <div class="calculator-output-section"></div>
+        <div class="calculator-output-section">
+          <div class="calculator-output-section__amount">
+            <label for="tip-amount" class="calculator-output-section__amount-title">
+              <span>Tip Amount</span>
+              <span>/ person</span>
+            </label>
+            <input type="text" class="calculator-output-section__amount-input" name="amount" id="tip-amount" />
+          </div>
+          <div class="calculator-output-section__total">
+            <label for="tip-total" class="calculator-output-section__amount-title">
+              <span>Total</span>
+              <span>/ person</span>
+            </label>
+            <input type="text" class="calculator-output-section__total-input" name="total" id="tip-total" />
+          </div>
+          <button class="calculator-output-section__reset-btn">Reset</button>
+        </div>
       </div>
     </div>
   </main>
-  
-
-  
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
