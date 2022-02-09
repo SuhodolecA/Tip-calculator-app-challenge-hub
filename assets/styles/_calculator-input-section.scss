@@ -1,0 +1,21 @@
+.calculator-input-section {
+    display: flex;
+    flex-direction: column;
+
+    &__bill {
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            font-size: .8em;
+            font-weight: $fw-b;
+            color: $color-very-dark-grayish-cyan;
+        }
+
+        &__tip {
+
+        }
+        
+    }
+
+}
