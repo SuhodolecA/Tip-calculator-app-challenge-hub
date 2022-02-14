@@ -1,0 +1,29 @@
+.calculator-output-section {
+    background: $color-very-dark-cyan;
+    border-radius: .5em;
+    padding: 2.5em 1.4em 1.4em;
+    max-width: 20em;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-input {
+            text-align: right;
+            border: 0;
+            background: transparent;
+            outline: none;
+            color: $color-strong-cyan;
+            font-family: $ff-space-mono;
+            font-size: $fs-xl;
+            font-weight: $fw-b;
+            max-width: 40%;
+        }
+    }
+}
