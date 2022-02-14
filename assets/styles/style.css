@@ -326,7 +326,8 @@ body {
   font-family: "Space Mono", monospace;
   font-size: 1.5rem;
   font-weight: 700;
-  max-width: 40%;
+  max-width: 50%;
+  width: 100%;
 }
 
 .calculator-output-section__reset-btn {
