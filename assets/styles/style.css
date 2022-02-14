@@ -111,6 +111,10 @@ body {
           flex-direction: column;
 }
 
+.calculator-input-section__tip {
+  margin-bottom: 2em;
+}
+
 .calculator-input-section__tip-set {
   border: 0;
   padding: 0;
@@ -145,6 +149,12 @@ body {
   padding: .9em 0em;
   text-align: center;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: background .2s linear;
+  transition: background .2s linear;
 }
 
 .calculator-input-section__tip-set__values-value__radio {
@@ -158,5 +168,32 @@ body {
 
 .calculator-input-section__tip-set__values-value__custom {
   width: 100%;
+  text-align: right;
+  border: 0;
+  outline: none;
+  background: #f4fafa;
+  font-family: "Space Mono", monospace;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.calculator-input-section__tip-set__values-value__custom::-webkit-input-placeholder {
+  text-align: center;
+  color: #7f9c9f;
+}
+
+.calculator-input-section__tip-set__values-value__custom:-ms-input-placeholder {
+  text-align: center;
+  color: #7f9c9f;
+}
+
+.calculator-input-section__tip-set__values-value__custom::-ms-input-placeholder {
+  text-align: center;
+  color: #7f9c9f;
+}
+
+.calculator-input-section__tip-set__values-value__custom::placeholder {
+  text-align: center;
+  color: #7f9c9f;
 }
 /*# sourceMappingURL=style.css.map */
