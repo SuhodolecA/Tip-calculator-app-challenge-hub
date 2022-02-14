@@ -28,14 +28,14 @@ main {
 .calculator {
     background: $color-white;
     margin-top: 2.1em;
-    padding: 1.8em;
+    padding: 1.6em;
     border-radius: 1em;
 }
 
 .input-display {
     padding: .8em .8em .8em 2em;
     text-align: right;
-    border:0;
+    border: 2px solid transparent;
     border-radius: .5em;
     background: $color-very-light-grayish-cyan;
     font-family: $ff-space-mono;
@@ -44,6 +44,16 @@ main {
     width: 100%;
     margin-top: .3em;
     margin-bottom: 2.2em;
+    outline: none;
+    transition: border .2s linear;
+
+    &.error:focus {
+        border-color: red;
+    }
+
+    &:focus {
+        border-color: $color-strong-cyan;
+    }
 }
 
 .label-title {
