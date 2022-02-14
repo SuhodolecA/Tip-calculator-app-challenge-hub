@@ -8,10 +8,24 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 1.8em;
 
         &-title {
             display: flex;
             flex-direction: column;
+
+            &__main {
+                color: $color-white;
+                font-size: .8em;
+                font-weight: $fw-b;
+                margin-bottom: 0.2em;
+            }
+
+            &__amount {
+                color: $color-dark-grayish-cyan;
+                font-size: 0.7em;
+                font-weight: $fw-b;
+            }
         }
 
         &-input {
@@ -25,5 +39,25 @@
             font-weight: $fw-b;
             max-width: 40%;
         }
+    }
+
+    &__reset-btn {
+        width: 100%;
+        text-align: center;
+        padding: .7em 0;
+        background: linear-gradient(to right, hsl(183, 82%, 24%), hsl(183, 72%, 25%));
+        border: 0;
+        font-family: $ff-space-mono;
+        font-size: 1.1em;
+        font-weight: $fw-b;
+        color: hsla(183, 100%, 15%, .5);
+        text-transform: uppercase;
+        border-radius: .3em;
+        cursor: pointer;
+    }
+
+        &__reset-btn.active {
+        background: $color-strong-cyan;
+        color: $color-very-dark-cyan;
     }
 }

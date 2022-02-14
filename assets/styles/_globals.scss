@@ -52,6 +52,13 @@ main {
     -o-caret-color: $color-strong-cyan;
     caret-color: $color-strong-cyan;
 
+    &::placeholder {
+        color: $color-dark-grayish-cyan;
+        font-family: $ff-space-mono;
+        font-weight: $fw-b;
+        font-size: 1.1em;
+    }
+
     &.error:focus {
         border-color: red;
     }

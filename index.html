@@ -36,7 +36,7 @@
         <div class="calculator-input-section">
           <div class="calculator-input-section__bill">
             <label for="bill-input" class="calculator-input-section__bill-title label-title">Bill</label>
-            <input type="text" id="bill-input" class="calculator-input-section__bill-input input-display" value="142.55" />
+            <input type="text" id="bill-input" class="calculator-input-section__bill-input input-display" placeholder="0" />
           </div>
           <div class="calculator-input-section__tip">
             <fieldset class="calculator-input-section__tip-set">
@@ -70,23 +70,23 @@
           </div>
           <div class="calculator-input-section__people">
             <label class="calculator-input-section__people-title label-title" for="people-input">Number of People</label>
-            <input type="text" class="calculator-input-section__people-input input-display" name="peoplenum" id="people-input" value="5" />
+            <input type="text" class="calculator-input-section__people-input input-display" name="peoplenum" id="people-input" placeholder="0" />
           </div>
         </div>
         <div class="calculator-output-section">
           <div class="calculator-output-section__item calculator-output-amount">
             <label for="tip-amount" class="calculator-output-section__item-title">
-              <span>Tip Amount</span>
-              <span>/ person</span>
+              <span class="calculator-output-section__item-title__main">Tip Amount</span>
+              <span class="calculator-output-section__item-title__amount">/ person</span>
             </label>
-            <input type="text" class="calculator-output-section__item-input" name="amount" id="tip-amount" value="$4.27" disabled />
+            <input type="text" class="calculator-output-section__item-input" name="amount" id="tip-amount" value="$0.00" disabled />
           </div>
           <div class="calculator-output-section__item calculator-output-total">
             <label for="tip-total" class="calculator-output-section__item-title">
-              <span>Total</span>
-              <span>/ person</span>
+              <span  class="calculator-output-section__item-title__main">Total</span>
+              <span class="calculator-output-section__item-title__amount">/ person</span>
             </label>
-            <input type="text" class="calculator-output-section__item-input" name="total" id="tip-total" value="$9999999" disabled />
+            <input type="text" class="calculator-output-section__item-input" name="total" id="tip-total" value="$0.00" disabled />
           </div>
           <button class="calculator-output-section__reset-btn">Reset</button>
         </div>
