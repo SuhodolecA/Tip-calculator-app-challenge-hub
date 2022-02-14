@@ -2,7 +2,7 @@
     background: $color-very-dark-cyan;
     border-radius: .5em;
     padding: 2.5em 1.4em 1.4em;
-    max-width: 20em;
+    max-width: 26em;
 
     &__item {
         display: flex;
@@ -45,7 +45,7 @@
         width: 100%;
         text-align: center;
         padding: .7em 0;
-        background: linear-gradient(to right, hsl(183, 82%, 24%), hsl(183, 72%, 25%));
+        background-image: linear-gradient(to right, hsl(183, 82%, 24%), hsl(183, 72%, 25%));
         border: 0;
         font-family: $ff-space-mono;
         font-size: 1.1em;
@@ -54,10 +54,15 @@
         text-transform: uppercase;
         border-radius: .3em;
         cursor: pointer;
-    }
+        transition: background .2s linear;
 
-        &__reset-btn.active {
-        background: $color-strong-cyan;
-        color: $color-very-dark-cyan;
+        &.active {
+            background: $color-strong-cyan;
+            color: $color-very-dark-cyan;
+        }
+
+        &:hover {
+            background: hsl(173, 61%, 77%);
+        }
     }
 }
