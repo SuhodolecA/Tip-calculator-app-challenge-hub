@@ -32,10 +32,6 @@ body {
           align-items: center;
 }
 
-main {
-  padding: 0 1em;
-}
-
 .calculator {
   background: white;
   margin-top: 2.1em;
@@ -82,6 +78,10 @@ main {
   display: none;
 }
 
+.label-title.calculator-input-section__people-title::before {
+  background-image: url(../../images/icon-person.svg);
+}
+
 .main-title {
   margin: 0 auto;
   text-transform: uppercase;
@@ -111,9 +111,52 @@ main {
           flex-direction: column;
 }
 
-.calculator-input-section__bill-title {
-  font-size: .8em;
+.calculator-input-section__tip-set {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.calculator-input-section__tip-set__values {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  margin-top: 1.2em;
+}
+
+.calculator-input-section__tip-set__values-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  max-width: 9em;
+  width: 100%;
+  border-radius: .5em;
+  overflow: hidden;
+}
+
+.calculator-input-section__tip-set__values-value__label {
+  background: #00494d;
+  color: white;
   font-weight: 700;
-  color: #5e7a7d;
+  width: 100%;
+  padding: .9em 0em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calculator-input-section__tip-set__values-value__radio {
+  visibility: hidden;
+  position: absolute;
+}
+
+.calculator-input-section__tip-set__values-value__radio:checked ~ .calculator-input-section__tip-set__values-value__label {
+  background: #26c0ab;
+}
+
+.calculator-input-section__tip-set__values-value__custom {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

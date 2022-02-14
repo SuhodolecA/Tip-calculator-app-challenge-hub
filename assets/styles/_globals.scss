@@ -22,7 +22,7 @@ body {
 }
 
 main {
-    padding: 0 1em;
+    // padding: 0 1em;
 }
 
 .calculator {
@@ -70,6 +70,10 @@ main {
 
     &.calculator-input-section__tip-set__title::before {
         display: none;
+    }
+
+    &.calculator-input-section__people-title::before {
+        background-image: url(../../images/icon-person.svg);
     }
 
 }
