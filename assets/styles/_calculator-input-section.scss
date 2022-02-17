@@ -1,21 +1,36 @@
 .calculator-input-section {
-    max-width: 20em;
+    max-width: 24.4em;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 
+    @media(min-width: 52em) {
+        margin-right: 2.8em;
+    }
+
+
     &__bill {
         display: flex;
         flex-direction: column;
-
-        &-title {
-            
-        }
+        position: relative;
+        // &::before {
+        //     content: "Can't be zero";
+        //     color: hsla(0, 100%, 50%, .5);
+        //     position: absolute; 
+        //     right: 0;
+        //     font-size: .6em;
+        //     font-weight: $fw-b;
+        // }
         
     }
 
     &__tip {
         margin-bottom: 2em;
+
+            
+    @media(min-width: 52em) {
+        margin: 2em 0;
+    }
         &-set {
             border: 0;
             padding: 0;
@@ -27,6 +42,10 @@
                 grid-gap: 1em;
                 justify-items: center;
                 margin-top: 1.2em;
+
+                @media(min-width: 32.5em) {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
 
                 &-value {
                     display: flex;
@@ -41,12 +60,18 @@
                         background: $color-very-dark-cyan;
                         color: $color-white;
                         font-weight: $fw-b;
+                        font-size: 1.3em;
                         width: 100%;
-                        padding: .9em 0em;
+                        padding: .7em 0em;
                         text-align: center;
                         cursor: pointer;
                         user-select: none;
-                        transition: background .2s linear;
+                        transition: all .2s linear;
+
+                        &:hover {
+                            background: hsl(173, 61%, 77%);
+                            color: $color-very-dark-cyan;
+                        }
                     }
 
                     &__radio {
@@ -70,6 +95,7 @@
                         font-weight: $fw-b;
                         border-radius: .5em;
                         cursor: pointer;
+                        padding: 0 .5em;
                         -webkit-caret-color: $color-strong-cyan;
                         -moz-caret-color: $color-strong-cyan;
                         -ms-caret-color: $color-strong-cyan;
@@ -82,7 +108,7 @@
                             color: $color-dark-grayish-cyan;
                         }
 
-                        &:focus {
+                        &:focus, &:hover {
                             border-color: $color-strong-cyan;
                         }
 

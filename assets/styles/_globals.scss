@@ -22,7 +22,14 @@ body {
 }
 
 main {
-    // padding: 0 1em;
+    max-width: 31em;
+    width: 100%;
+    padding: 0 .9em;
+
+    @media(min-width: 52em) {
+        max-width: 57em;
+    }
+
 }
 
 .calculator {
@@ -30,6 +37,11 @@ main {
     margin-top: 2.1em;
     padding: 1.6em;
     border-radius: 1em;
+
+    @media(min-width: 52em) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .input-display {
@@ -40,17 +52,25 @@ main {
     background: $color-very-light-grayish-cyan;
     font-family: $ff-space-mono;
     font-weight: $fw-b;
+    font-size: 1.3em;
     color: $color-very-dark-cyan;
     width: 100%;
     margin-top: .3em;
-    margin-bottom: 2.2em;
+    margin-bottom: 2em;
     outline: none;
+    cursor: pointer;
     transition: border .2s linear;
     -webkit-caret-color: $color-strong-cyan;
     -moz-caret-color: $color-strong-cyan;
     -ms-caret-color: $color-strong-cyan;
     -o-caret-color: $color-strong-cyan;
     caret-color: $color-strong-cyan;
+
+    
+    @media(min-width: 52em) {
+        margin-bottom: 0;
+    }
+    
 
     &::placeholder {
         color: $color-dark-grayish-cyan;
@@ -63,9 +83,14 @@ main {
         border-color: red;
     }
 
-    &:focus {
+    &:focus, &:hover {
         border-color: $color-strong-cyan;
     }
+
+    &:focus::placeholder {
+        opacity: 0;
+    }
+
 }
 
 .label-title {
@@ -73,6 +98,7 @@ main {
     font-weight: $fw-b;
     color: $color-very-dark-grayish-cyan;
     position: relative;
+    
 
     
     &::before {
@@ -83,11 +109,10 @@ main {
         display: block;
         position: absolute;
         z-index: 100;
-        bottom: -33px;
+        bottom: -47px;
         left: 1em;
         width: 15px;
         height: 15px;
-        // border: 1px solid red;
     }
 
     &.calculator-input-section__tip-set__title::before {

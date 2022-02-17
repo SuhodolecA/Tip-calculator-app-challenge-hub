@@ -2,7 +2,10 @@
     background: $color-very-dark-cyan;
     border-radius: .5em;
     padding: 2.5em 1.4em 1.4em;
-    max-width: 26em;
+    max-width: 26.3em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 
     &__item {
         display: flex;
@@ -19,12 +22,20 @@
                 font-size: .8em;
                 font-weight: $fw-b;
                 margin-bottom: 0.2em;
+
+                @media(min-width: 52em) {
+                    font-size: 1em;
+                }
             }
 
             &__amount {
                 color: $color-dark-grayish-cyan;
                 font-size: 0.7em;
                 font-weight: $fw-b;
+
+                @media(min-width: 52em) {
+                    font-size: .9em;
+                }
             }
         }
 
@@ -39,15 +50,22 @@
             font-weight: $fw-b;
             max-width: 50%;
             width: 100%;
+
+            @media(min-width: 52em) {
+                font-size: 3em;
+            }
+
         }
     }
 
     &__reset-btn {
         width: 100%;
         text-align: center;
+        max-width: 19em;
         padding: .7em 0;
         background-image: linear-gradient(to right, hsl(183, 82%, 24%), hsl(183, 72%, 25%));
         border: 0;
+        margin: 0 auto;
         font-family: $ff-space-mono;
         font-size: 1.1em;
         font-weight: $fw-b;
@@ -55,8 +73,10 @@
         text-transform: uppercase;
         border-radius: .3em;
         cursor: pointer;
+        margin-top: auto;
         transition: background .2s linear;
 
+        
         &.active {
             background: $color-strong-cyan;
             color: $color-very-dark-cyan;
