@@ -35,7 +35,7 @@ body {
 main {
   max-width: 31em;
   width: 100%;
-  padding: 0 .9em;
+  padding: 0 .8em;
 }
 
 @media (min-width: 52em) {
@@ -62,8 +62,45 @@ main {
   }
 }
 
-.input-display {
-  padding: .8em .8em .8em 2em;
+.input-container__title {
+  font-size: .8em;
+  font-weight: 700;
+  color: #5e7a7d;
+  position: relative;
+  display: block;
+}
+
+.input-container__title::before {
+  content: "Can't be zero";
+  color: rgba(255, 0, 0, 0.5);
+  position: absolute;
+  right: 0;
+  font-size: .9em;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.input-container__display {
+  position: relative;
+}
+
+.input-container__display::before {
+  content: '';
+  background-image: url(../../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+}
+
+.input-container__display-input {
+  padding: .4em .8em .4em 2em;
   text-align: right;
   border: 2px solid transparent;
   border-radius: .5em;
@@ -73,8 +110,6 @@ main {
   font-size: 1.3em;
   color: #00494d;
   width: 100%;
-  margin-top: .3em;
-  margin-bottom: 2em;
   outline: none;
   cursor: pointer;
   -webkit-transition: border .2s linear;
@@ -86,91 +121,60 @@ main {
   caret-color: #26c0ab;
 }
 
-@media (min-width: 52em) {
-  .input-display {
-    margin-bottom: 0;
-  }
-}
-
-.input-display::-webkit-input-placeholder {
+.input-container__display-input::-webkit-input-placeholder {
   color: #7f9c9f;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-size: 1.1em;
 }
 
-.input-display:-ms-input-placeholder {
+.input-container__display-input:-ms-input-placeholder {
   color: #7f9c9f;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-size: 1.1em;
 }
 
-.input-display::-ms-input-placeholder {
+.input-container__display-input::-ms-input-placeholder {
   color: #7f9c9f;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-size: 1.1em;
 }
 
-.input-display::placeholder {
+.input-container__display-input::placeholder {
   color: #7f9c9f;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-size: 1.1em;
 }
 
-.input-display.error:focus {
+.input-container__display-input.error {
   border-color: red;
 }
 
-.input-display:focus, .input-display:hover {
+.input-container__display-input.error:focus, .input-container__display-input.error:hover {
+  border-color: red;
+}
+
+.input-container__display-input:focus, .input-container__display-input:hover {
   border-color: #26c0ab;
 }
 
-.input-display:focus::-webkit-input-placeholder {
+.input-container__display-input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
 
-.input-display:focus:-ms-input-placeholder {
+.input-container__display-input:focus:-ms-input-placeholder {
   opacity: 0;
 }
 
-.input-display:focus::-ms-input-placeholder {
+.input-container__display-input:focus::-ms-input-placeholder {
   opacity: 0;
 }
 
-.input-display:focus::placeholder {
+.input-container__display-input:focus::placeholder {
   opacity: 0;
-}
-
-.label-title {
-  font-size: .8em;
-  font-weight: 700;
-  color: #5e7a7d;
-  position: relative;
-}
-
-.label-title::before {
-  content: '';
-  background-image: url(../../images/icon-dollar.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: block;
-  position: absolute;
-  z-index: 100;
-  bottom: -47px;
-  left: 1em;
-  width: 15px;
-  height: 15px;
-}
-
-.label-title.calculator-input-section__tip-set__title::before {
-  display: none;
-}
-
-.label-title.calculator-input-section__people-title::before {
-  background-image: url(../../images/icon-person.svg);
 }
 
 .main-title {
@@ -200,19 +204,8 @@ main {
   }
 }
 
-.calculator-input-section__bill {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-}
-
 .calculator-input-section__tip {
-  margin-bottom: 2em;
+  margin: 2em 0;
 }
 
 @media (min-width: 52em) {
@@ -294,7 +287,7 @@ main {
   outline: none;
   background: #f4fafa;
   font-family: "Space Mono", monospace;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 700;
   border-radius: .5em;
   cursor: pointer;
@@ -353,7 +346,7 @@ main {
   border-radius: .5em;
   padding: 2.5em 1.4em 1.4em;
   max-width: 26.3em;
-  margin: 0 auto;
+  margin: 2em auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,6 +354,12 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (min-width: 52em) {
+  .calculator-output-section {
+    margin: 0 auto;
+  }
 }
 
 .calculator-output-section__item {
@@ -435,8 +434,7 @@ main {
   text-align: center;
   max-width: 19em;
   padding: .7em 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#0b6a6f), to(#12696e));
-  background-image: linear-gradient(to right, #0b6a6f, #12696e);
+  background: #12696e;
   border: 0;
   margin: 0 auto;
   font-family: "Space Mono", monospace;
@@ -447,8 +445,8 @@ main {
   border-radius: .3em;
   cursor: pointer;
   margin-top: auto;
-  -webkit-transition: background .2s linear;
-  transition: background .2s linear;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 .calculator-output-section__reset-btn.active {
@@ -458,5 +456,6 @@ main {
 
 .calculator-output-section__reset-btn:hover {
   background: #a1e8e0;
+  color: #00494d;
 }
 /*# sourceMappingURL=style.css.map */

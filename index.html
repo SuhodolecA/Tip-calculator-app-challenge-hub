@@ -34,13 +34,15 @@
 
       <div class="calculator">
         <div class="calculator-input-section">
-          <div class="calculator-input-section__bill">
-            <label for="bill-input" class="calculator-input-section__bill-title label-title">Bill</label>
-            <input type="text" id="bill-input" class="calculator-input-section__bill-input input-display" placeholder="0" />
+          <div class="calculator-input-section__bill input-container">
+            <label for="bill-input" class="calculator-input-section__bill-title label-title input-container__title">Bill</label>
+            <div class="calculator-input-section__bill-display input-container__display">
+              <input type="text" id="bill-input" class="calculator-input-section__bill-display-input input-container__display-input" placeholder="0" />
+            </div>
           </div>
           <div class="calculator-input-section__tip">
             <fieldset class="calculator-input-section__tip-set">
-              <legend class="calculator-input-section__tip-set__title label-title">Select Tip %</legend>
+              <legend class="calculator-input-section__tip-set__title input-container__title">Select Tip %</legend>
               <div class="calculator-input-section__tip-set__values">
                 <div class="calculator-input-section__tip-set__values-value">
                   <input class="calculator-input-section__tip-set__values-value__radio" type="radio" name="tip" id="5" />
@@ -68,9 +70,11 @@
               </div>
             </fieldset>
           </div>
-          <div class="calculator-input-section__people">
-            <label class="calculator-input-section__people-title label-title" for="people-input">Number of People</label>
-            <input type="text" class="calculator-input-section__people-input input-display" name="peoplenum" id="people-input" placeholder="0" />
+          <div class="calculator-input-section__people input-container">
+            <label class="calculator-input-section__people-title input-container__title" for="people-input">Number of People</label>
+            <div class="calculator-input-section__people-display input-container__display">
+              <input type="text" class="calculator-input-section__people-display-input input-container__display-input" name="peoplenum" id="people-input" placeholder="0" />
+            </div>
           </div>
         </div>
         <div class="calculator-output-section">
@@ -88,7 +92,7 @@
             </label>
             <input type="text" class="calculator-output-section__item-input" name="total" id="tip-total" value="$0.00" disabled/>
           </div>
-          <button class="calculator-output-section__reset-btn active">Reset</button>
+          <button class="calculator-output-section__reset-btn">Reset</button>
         </div>
       </div>
     </div>
