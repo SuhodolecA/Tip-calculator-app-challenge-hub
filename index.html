@@ -36,7 +36,7 @@
         <div class="calculator-input-section">
           <div class="calculator-input-section__bill input-container">
             <label for="bill-input" class="calculator-input-section__bill-title label-title input-container__title">Bill</label>
-            <div class="calculator-input-section__bill-display input-container__display">
+            <div class="calculator-input-section__bill-display input-container__display" data-error="">
               <input type="text" id="bill-input" class="calculator-input-section__bill-display-input input-container__display-input" placeholder="0" />
             </div>
           </div>
@@ -72,7 +72,7 @@
           </div>
           <div class="calculator-input-section__people input-container">
             <label class="calculator-input-section__people-title input-container__title" for="people-input">Number of People</label>
-            <div class="calculator-input-section__people-display input-container__display">
+            <div class="calculator-input-section__people-display input-container__display" data-error="Can't be zero">
               <input type="text" class="calculator-input-section__people-display-input input-container__display-input" name="peoplenum" id="people-input" placeholder="0" />
             </div>
           </div>
@@ -101,6 +101,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/SuhodolecA?tab=repositoriesgit " target="_blank">Anton Sukhadolets</a>.
   </footer>
+
+  <script src="assets/js/app.js"></script>
 </body>
 
 </html>

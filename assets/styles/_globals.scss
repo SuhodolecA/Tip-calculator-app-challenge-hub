@@ -133,15 +133,15 @@ main {
         position: relative;
         display: block;
 
-        &::before {
-            content: "Can't be zero";
-            color: hsla(0, 100%, 50%, .5);
-            position: absolute; 
-            right: 0;
-            font-size: .9em;
-            font-weight: $fw-b;
-            opacity: 0;
-        }
+        // &::before {
+        //     content: "Can't be zero";
+        //     color: hsla(0, 100%, 50%, .5);
+        //     position: absolute; 
+        //     right: 0;
+        //     font-size: .9em;
+        //     font-weight: $fw-b;
+        //     opacity: 1;
+        // }
     }
 
     &__display {
@@ -159,6 +159,29 @@ main {
             transform: translateY(-50%);
             width: 15px;
             height: 15px;
+            }
+
+            &::after {
+                content: attr(data-error);
+                color: hsla(0, 100%, 50%, .5);
+                position: absolute; 
+                top: -20px;
+                right: 0;
+                font-size: .9em;
+                font-weight: $fw-b;
+                opacity: 0;
+            }
+
+            &.error::after {
+                opacity: 1;
+            }
+
+            &.error > &-input{
+                border-color: hsla(0, 100%, 50%, .5);
+            }
+
+            &.error > &-input:focus, &-input:hover {
+                border-color: hsla(0, 100%, 50%, .5);
             }
 
         &-input {
@@ -189,14 +212,6 @@ main {
                 font-weight: $fw-b;
                 font-size: 1.1em;
                 }
-                
-            &.error {
-                border-color: red;
-            }
-
-            &.error:focus, &.error:hover {
-                border-color: red;
-            }
                 
             &:focus, &:hover {
                 border-color: $color-strong-cyan;

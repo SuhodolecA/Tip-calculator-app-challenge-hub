@@ -70,16 +70,6 @@ main {
   display: block;
 }
 
-.input-container__title::before {
-  content: "Can't be zero";
-  color: rgba(255, 0, 0, 0.5);
-  position: absolute;
-  right: 0;
-  font-size: .9em;
-  font-weight: 700;
-  opacity: 0;
-}
-
 .input-container__display {
   position: relative;
 }
@@ -97,6 +87,29 @@ main {
           transform: translateY(-50%);
   width: 15px;
   height: 15px;
+}
+
+.input-container__display::after {
+  content: attr(data-error);
+  color: rgba(255, 0, 0, 0.5);
+  position: absolute;
+  top: -20px;
+  right: 0;
+  font-size: .9em;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.input-container__display.error::after {
+  opacity: 1;
+}
+
+.input-container__display.error > .input-container__display-input {
+  border-color: rgba(255, 0, 0, 0.5);
+}
+
+.input-container__display.error > .input-container__display-input:focus, .input-container__display-input:hover {
+  border-color: rgba(255, 0, 0, 0.5);
 }
 
 .input-container__display-input {
@@ -147,14 +160,6 @@ main {
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-size: 1.1em;
-}
-
-.input-container__display-input.error {
-  border-color: red;
-}
-
-.input-container__display-input.error:focus, .input-container__display-input.error:hover {
-  border-color: red;
 }
 
 .input-container__display-input:focus, .input-container__display-input:hover {
@@ -227,7 +232,7 @@ main {
       grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
   justify-items: center;
-  margin-top: 1.2em;
+  margin-top: .5em;
 }
 
 @media (min-width: 32.5em) {
@@ -419,13 +424,13 @@ main {
   font-family: "Space Mono", monospace;
   font-size: 1.5rem;
   font-weight: 700;
-  max-width: 50%;
+  max-width: 70%;
   width: 100%;
 }
 
 @media (min-width: 52em) {
   .calculator-output-section__item-input {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 }
 
