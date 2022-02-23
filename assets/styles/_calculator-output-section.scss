@@ -90,5 +90,10 @@
             background: hsl(173, 61%, 77%);
             color: $color-very-dark-cyan;
         }
+
+        &:disabled:hover {
+            background: hsl(183, 72%, 25%);
+            color: hsla(183, 100%, 15%, .5);
+        }
     }
 }

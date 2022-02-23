@@ -3,6 +3,9 @@ const peopleNum = document.querySelector('.calculator-input-section__people-disp
 const customInput = document.querySelector('.calculator-input-section__tip-set__values-value__custom');
 const tipsValues = document.querySelectorAll('.calculator-input-section__tip-set__values-value__radio');
 const outputs = document.querySelectorAll('.calculator-output-section__item-input');
+const resetBtn = document.querySelector('.calculator-output-section__reset-btn');
+
+
 
 // === event listeners ===
 billInput.addEventListener('blur',(e) => {
@@ -66,6 +69,17 @@ tipsValues.forEach(radio => radio.addEventListener('click', () => {
     }
 }));
 
+resetBtn.addEventListener('click', (e) => {
+    console.log('e.target', e.target)
+    if(e.target.classList.contains('active')) {
+        resetBtn.classList.remove('active');
+        outputs.forEach(output => output.value = '$0.00');
+        tipsValues.forEach(val => val.checked = false);
+        billInput.value = '';
+        peopleNum.value = '';
+        resetBtn.disabled = true;
+    }
+});
 // === / event listeners ===
 
 
@@ -130,6 +144,8 @@ function calculateAmount() {
         if(arr) {
             outputs[0].value = `$${arr[0]}`;
             outputs[1].value = `$${arr[1]}`;
+            resetBtn.classList.add('active');
+            resetBtn.disabled = false;
         }
   }
 

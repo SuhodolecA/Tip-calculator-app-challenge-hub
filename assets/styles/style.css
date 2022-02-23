@@ -463,4 +463,9 @@ main {
   background: #a1e8e0;
   color: #00494d;
 }
+
+.calculator-output-section__reset-btn:disabled:hover {
+  background: #12696e;
+  color: rgba(0, 73, 77, 0.5);
+}
 /*# sourceMappingURL=style.css.map */
