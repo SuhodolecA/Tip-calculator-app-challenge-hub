@@ -1,6 +1,6 @@
 # Frontend Mentor - Tip calculator app
 
-![Solution Link](https://tip-calculator-app-challenge-hub.vercel.app/)
+[Solution Link](https://tip-calculator-app-challenge-hub.vercel.app/)
 
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
 
