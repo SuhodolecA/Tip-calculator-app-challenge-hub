@@ -115,7 +115,7 @@ function calculateAmount() {
         numOfPeople = parseFloat(peopleNum.value);
         tipValue = parseFloat(customInput.value || getTipValue(tipsValues));
         tipAmount = (((bill / 100) * tipValue) / numOfPeople).toFixed(2);
-        total = ((bill / 100) * tipValue).toFixed(2);
+        total = (Number(bill / numOfPeople) + Number(tipAmount)).toFixed(2);
   if (tipAmount >= 10000000 || total >= 10000000) {
     return ["Error", "Error"];
   } else {
