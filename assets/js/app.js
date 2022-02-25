@@ -75,10 +75,12 @@ resetBtn.addEventListener("click", (e) => {
 });
 // === / event listeners ===
 
+
+
+
 // ==== helper functions ===
 function checkInputVal(obj) {
   const value = obj.value;
-  console.log('!isNaN(value) && !(value < 0) && value != 0', !isNaN(value) && !(value < 0) && value != 0)
   return !isNaN(value) && !(value < 0) && value != 0;
 }
 
@@ -107,29 +109,24 @@ function catchError(obj) {
     obj.parentNode.classList.remove("error");
   }
 }
-// !!!!!!!!!!!!!!!!!!!!!! resolve rounded problem!!!
+
 function calculateAmount() {
-  const bill = parseFloat(billInput.value); 
-  console.log('bill', bill);
-  const numOfPeople = parseFloat(peopleNum.value);
-  console.log('numOfPeople', numOfPeople);
-  const tipValue = parseFloat(customInput.value || getTipValue(tipsValues));
-  console.log('tipValue', tipValue);
-  const tipAmount = (((bill / 100) * tipValue) / numOfPeople).toFixed(2);
-  console.log('tipAmount', tipAmount);
-  const total = ((bill / 100) * tipValue).toFixed(2);
-  console.log('total', total);
+  const bill = parseFloat(billInput.value);
+        numOfPeople = parseFloat(peopleNum.value);
+        tipValue = parseFloat(customInput.value || getTipValue(tipsValues));
+        tipAmount = (((bill / 100) * tipValue) / numOfPeople).toFixed(2);
+        total = ((bill / 100) * tipValue).toFixed(2);
   if (tipAmount >= 10000000 || total >= 10000000) {
     return ["Error", "Error"];
   } else {
     return [tipAmount, total];
   }
 }
-// -- todo
+
 function checkValidValues() {
   const bill = parseFloat(billInput.value);
-  let people = parseFloat(peopleNum.value);
-  let tips = parseFloat(getTipValue(tipsValues) || customInput.value);
+        people = parseFloat(peopleNum.value);
+        tips = parseFloat(getTipValue(tipsValues) || customInput.value);
   if (bill <=0 || people <=0 || tips <= 0) return false;
   return Boolean(bill && people && tips);
 }

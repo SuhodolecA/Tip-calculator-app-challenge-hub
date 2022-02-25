@@ -40,7 +40,7 @@
                     overflow: hidden;
 
                     &.error > &__custom {
-                        border-color: hsla(0, 100%, 50%, .5);
+                        border-color: $color-error;
                     }
 
 

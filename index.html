@@ -35,9 +35,11 @@
       <div class="calculator">
         <div class="calculator-input-section">
           <div class="calculator-input-section__bill input-container">
-            <label for="bill-input" class="calculator-input-section__bill-title label-title input-container__title">Bill</label>
+            <label for="bill-input"
+              class="calculator-input-section__bill-title label-title input-container__title">Bill</label>
             <div class="calculator-input-section__bill-display input-container__display" data-error="">
-              <input type="text" id="bill-input" class="calculator-input-section__bill-display-input input-container__display-input" placeholder="0" />
+              <input type="text" id="bill-input"
+                class="calculator-input-section__bill-display-input input-container__display-input" placeholder="0" />
             </div>
           </div>
           <div class="calculator-input-section__tip">
@@ -45,35 +47,43 @@
               <legend class="calculator-input-section__tip-set__title input-container__title">Select Tip %</legend>
               <div class="calculator-input-section__tip-set__values">
                 <div class="calculator-input-section__tip-set__values-value">
-                  <input class="calculator-input-section__tip-set__values-value__radio" type="radio" name="tip" id="5" />
+                  <input class="calculator-input-section__tip-set__values-value__radio" type="radio" name="tip"
+                    id="5" />
                   <label for="5" class="calculator-input-section__tip-set__values-value__label">5%</label>
                 </div>
                 <div class="calculator-input-section__tip-set__values-value">
-                  <input class="calculator-input-section__tip-set__values-value__radio" type="radio" name="tip" id="10" />
+                  <input class="calculator-input-section__tip-set__values-value__radio" type="radio" name="tip"
+                    id="10" />
                   <label for="10" class="calculator-input-section__tip-set__values-value__label">10%</label>
                 </div>
                 <div class="calculator-input-section__tip-set__values-value">
-                  <input class="calculator-input-section__tip-set__values-value__radio" type="radio" name="tip" id="15" />
+                  <input class="calculator-input-section__tip-set__values-value__radio" type="radio" name="tip"
+                    id="15" />
                   <label for="15" class="calculator-input-section__tip-set__values-value__label">15%</label>
                 </div>
                 <div class="calculator-input-section__tip-set__values-value">
-                  <input class="calculator-input-section__tip-set__values-value__radio" type="radio" name="tip" id="25" />
+                  <input class="calculator-input-section__tip-set__values-value__radio" type="radio" name="tip"
+                    id="25" />
                   <label for="25" class="calculator-input-section__tip-set__values-value__label">25%</label>
                 </div>
                 <div class="calculator-input-section__tip-set__values-value">
-                  <input class="calculator-input-section__tip-set__values-value__radio" type="radio" name="tip" id="50" />
+                  <input class="calculator-input-section__tip-set__values-value__radio" type="radio" name="tip"
+                    id="50" />
                   <label for="50" class="calculator-input-section__tip-set__values-value__label">50%</label>
                 </div>
                 <label for="custom" class="calculator-input-section__tip-set__values-value">
-                  <input class="calculator-input-section__tip-set__values-value__custom" type="text" name="custom" id="custom" placeholder="Custom" />
+                  <input class="calculator-input-section__tip-set__values-value__custom" type="text" name="custom"
+                    id="custom" placeholder="Custom" />
                 </label>
               </div>
             </fieldset>
           </div>
           <div class="calculator-input-section__people input-container">
-            <label class="calculator-input-section__people-title input-container__title" for="people-input">Number of People</label>
+            <label class="calculator-input-section__people-title input-container__title" for="people-input">Number of
+              People</label>
             <div class="calculator-input-section__people-display input-container__display" data-error="Can't be zero">
-              <input type="text" class="calculator-input-section__people-display-input input-container__display-input" name="peoplenum" id="people-input" placeholder="0" />
+              <input type="text" class="calculator-input-section__people-display-input input-container__display-input"
+                name="peoplenum" id="people-input" placeholder="0" />
             </div>
           </div>
         </div>
@@ -83,14 +93,16 @@
               <span class="calculator-output-section__item-title__main">Tip Amount</span>
               <span class="calculator-output-section__item-title__amount">/ person</span>
             </label>
-            <input type="text" class="calculator-output-section__item-input" name="amount" id="tip-amount" value="$0.00" disabled/>
+            <input type="text" class="calculator-output-section__item-input" name="amount" id="tip-amount" value="$0.00"
+              disabled />
           </div>
           <div class="calculator-output-section__item calculator-output-total">
             <label for="tip-total" class="calculator-output-section__item-title">
-              <span  class="calculator-output-section__item-title__main">Total</span>
+              <span class="calculator-output-section__item-title__main">Total</span>
               <span class="calculator-output-section__item-title__amount">/ person</span>
             </label>
-            <input type="text" class="calculator-output-section__item-input" name="total" id="tip-total" value="$0.00" disabled/>
+            <input type="text" class="calculator-output-section__item-input" name="total" id="tip-total" value="$0.00"
+              disabled />
           </div>
           <button class="calculator-output-section__reset-btn" disabled>Reset</button>
         </div>
