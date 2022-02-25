@@ -108,7 +108,6 @@ function catchError(obj) {
   }
 }
 // !!!!!!!!!!!!!!!!!!!!!! resolve rounded problem!!!
-// !!!!!!!!!!!!!!!!!!!!!! bug with negative numbers in inputs!!!
 function calculateAmount() {
   const bill = parseFloat(billInput.value); 
   console.log('bill', bill);

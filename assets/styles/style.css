@@ -89,6 +89,10 @@ main {
   height: 15px;
 }
 
+.input-container__display.calculator-input-section__people-display::before {
+  background-image: url("../../images/icon-person.svg");
+}
+
 .input-container__display::after {
   content: attr(data-error);
   color: rgba(255, 0, 0, 0.5);
