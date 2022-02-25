@@ -253,6 +253,10 @@ main {
   overflow: hidden;
 }
 
+.calculator-input-section__tip-set__values-value.error > .calculator-input-section__tip-set__values-value__custom {
+  border-color: rgba(255, 0, 0, 0.5);
+}
+
 .calculator-input-section__tip-set__values-value__label {
   background: #00494d;
   color: white;
@@ -448,7 +452,6 @@ main {
   color: rgba(0, 73, 77, 0.5);
   text-transform: uppercase;
   border-radius: .3em;
-  cursor: pointer;
   margin-top: auto;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
@@ -457,15 +460,11 @@ main {
 .calculator-output-section__reset-btn.active {
   background: #26c0ab;
   color: #00494d;
+  cursor: pointer;
 }
 
-.calculator-output-section__reset-btn:hover {
+.calculator-output-section__reset-btn.active:hover {
   background: #a1e8e0;
   color: #00494d;
-}
-
-.calculator-output-section__reset-btn:disabled:hover {
-  background: #12696e;
-  color: rgba(0, 73, 77, 0.5);
 }
 /*# sourceMappingURL=style.css.map */

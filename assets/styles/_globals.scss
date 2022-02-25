@@ -44,87 +44,6 @@ main {
     }
 }
 
-// .input-display {
-//     padding: .8em .8em .8em 2em;
-//     text-align: right;
-//     border: 2px solid transparent;
-//     border-radius: .5em;
-//     background: $color-very-light-grayish-cyan;
-//     font-family: $ff-space-mono;
-//     font-weight: $fw-b;
-//     font-size: 1.3em;
-//     color: $color-very-dark-cyan;
-//     width: 100%;
-//     margin-top: .3em;
-//     margin-bottom: 2em;
-//     outline: none;
-//     cursor: pointer;
-//     transition: border .2s linear;
-//     -webkit-caret-color: $color-strong-cyan;
-//     -moz-caret-color: $color-strong-cyan;
-//     -ms-caret-color: $color-strong-cyan;
-//     -o-caret-color: $color-strong-cyan;
-//     caret-color: $color-strong-cyan;
-
-    
-//     @media(min-width: 52em) {
-//         margin-bottom: 0;
-//     }
-    
-
-//     &::placeholder {
-//         color: $color-dark-grayish-cyan;
-//         font-family: $ff-space-mono;
-//         font-weight: $fw-b;
-//         font-size: 1.1em;
-//     }
-
-//     &.error:focus {
-//         border-color: red;
-//     }
-
-//     &:focus, &:hover {
-//         border-color: $color-strong-cyan;
-//     }
-
-//     &:focus::placeholder {
-//         opacity: 0;
-//     }
-
-// }
-
-// .label-title {
-//     font-size: .8em;
-//     font-weight: $fw-b;
-//     color: $color-very-dark-grayish-cyan;
-//     position: relative;
-    
-
-    
-//     &::before {
-//         content: '';
-//         background-image: url(../../images/icon-dollar.svg);
-//         background-repeat: no-repeat;
-//         background-position: center center;
-//         display: block;
-//         position: absolute;
-//         z-index: 100;
-//         bottom: -47px;
-//         left: 1em;
-//         width: 15px;
-//         height: 15px;
-//     }
-
-//     &.calculator-input-section__tip-set__title::before {
-//         display: none;
-//     }
-
-//     &.calculator-input-section__people-title::before {
-//         background-image: url(../../images/icon-person.svg);
-//     }
-
-// }
-
 .input-container {
     &__title {
         font-size: .8em;
@@ -132,16 +51,6 @@ main {
         color: $color-very-dark-grayish-cyan;
         position: relative;
         display: block;
-
-        // &::before {
-        //     content: "Can't be zero";
-        //     color: hsla(0, 100%, 50%, .5);
-        //     position: absolute; 
-        //     right: 0;
-        //     font-size: .9em;
-        //     font-weight: $fw-b;
-        //     opacity: 1;
-        // }
     }
 
     &__display {
@@ -195,8 +104,6 @@ main {
             font-size: 1.3em;
             color: $color-very-dark-cyan;
             width: 100%;
-            // margin-top: .3em;
-            // margin-bottom: 2em;
             outline: none;
             cursor: pointer;
             transition: border .2s linear;

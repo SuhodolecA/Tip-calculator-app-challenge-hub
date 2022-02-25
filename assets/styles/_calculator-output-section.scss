@@ -76,7 +76,6 @@
         color: hsla(183, 100%, 15%, .5);
         text-transform: uppercase;
         border-radius: .3em;
-        cursor: pointer;
         margin-top: auto;
         transition: all .2s linear;    
 
@@ -84,16 +83,13 @@
         &.active {
             background: $color-strong-cyan;
             color: $color-very-dark-cyan;
+            cursor: pointer;
         }
 
-        &:hover {
+        &.active:hover {
             background: hsl(173, 61%, 77%);
             color: $color-very-dark-cyan;
         }
 
-        &:disabled:hover {
-            background: hsl(183, 72%, 25%);
-            color: hsla(183, 100%, 15%, .5);
-        }
     }
 }

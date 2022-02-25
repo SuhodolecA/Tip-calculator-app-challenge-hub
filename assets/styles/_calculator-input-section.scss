@@ -8,22 +8,6 @@
         margin-right: 2.8em;
     }
 
-
-    &__bill {
-        // display: flex;
-        // flex-direction: column;
-        // position: relative;
-        // &::before {
-        //     content: "Can't be zero";
-        //     color: hsla(0, 100%, 50%, .5);
-        //     position: absolute; 
-        //     right: 0;
-        //     font-size: .6em;
-        //     font-weight: $fw-b;
-        // }
-        
-    }
-
     &__tip {
         margin: 2em 0;
 
@@ -54,6 +38,10 @@
                     width: 100%;
                     border-radius: .5em;
                     overflow: hidden;
+
+                    &.error > &__custom {
+                        border-color: hsla(0, 100%, 50%, .5);
+                    }
 
 
                     &__label {
